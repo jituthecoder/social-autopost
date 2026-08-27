@@ -44,9 +44,10 @@ export default function LoginPage() {
         // Redirect to configured Dashboard URL (Laravel frontend / dashboard domain)
         window.location.href = result.redirectUrl;
       }
-    } catch (err) {
+    } catch (err: unknown) {
       console.error('Login error:', err);
-      setErrors({ general: 'Authentication failed. Please check your credentials.' });
+      const msg = err instanceof Error ? err.message : 'Authentication failed. Please check your credentials.';
+      setErrors({ general: msg });
       setLoading(false);
     }
   };

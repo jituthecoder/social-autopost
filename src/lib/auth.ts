@@ -1,12 +1,10 @@
 /**
- * Authentication Service Layer
- * 
- * Note for Phase 2: This module will be updated to consume the Laravel REST API
- * (e.g. POST to https://api.mydomain.com/api/v1/auth/login and /auth/register with Sanctum cookies/tokens).
- * Currently, it provides validation and handles client-side redirection to NEXT_PUBLIC_DASHBOARD_URL.
+ * Authentication Service Layer for Next.js Marketing Website
+ * Connects directly to the Laravel 11 API Backend (https://social-api.w3lead.in/api/v1)
  */
 
-export const DASHBOARD_URL = process.env.NEXT_PUBLIC_DASHBOARD_URL || 'https://dashboard.mydomain.com';
+export const DASHBOARD_URL = process.env.NEXT_PUBLIC_DASHBOARD_URL || 'https://social-dashboard.w3lead.in';
+export const API_URL = (process.env.NEXT_PUBLIC_API_URL || 'https://social-api.w3lead.in/api/v1').replace(/\/+$/, '');
 
 export interface LoginPayload {
   email: string;
@@ -18,26 +16,68 @@ export interface SignupPayload {
   name: string;
   email: string;
   password?: string;
-  termsAccepted: boolean;
+  workspace_name?: string;
+  termsAccepted?: boolean;
 }
 
 export async function loginUser(payload: LoginPayload): Promise<{ success: boolean; redirectUrl: string }> {
-  // In Phase 2, dispatch API call to Laravel Sanctum / Fortify API
-  console.log('[Auth Service] Simulated login attempt:', payload.email);
+  const response = await fetch(`${API_URL}/auth/login`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json',
+    },
+    body: JSON.stringify({
+      email: payload.email,
+      password: payload.password,
+    }),
+  });
 
-  // Redirect to production/dev dashboard domain after successful authentication
+  const data = await response.json();
+
+  if (!response.ok || !data.success) {
+    throw new Error(data.message || 'Authentication failed. Please check your credentials.');
+  }
+
+  const token = data.data?.token || '';
+  const workspaceId = data.data?.current_workspace?.id || '';
+
+  const redirectUrl = `${DASHBOARD_URL}/?token=${encodeURIComponent(token)}${workspaceId ? `&workspace_id=${workspaceId}` : ''}`;
+
   return {
     success: true,
-    redirectUrl: DASHBOARD_URL,
+    redirectUrl,
   };
 }
 
 export async function signupUser(payload: SignupPayload): Promise<{ success: boolean; redirectUrl: string }> {
-  // In Phase 2, dispatch API call to Laravel API
-  console.log('[Auth Service] Simulated signup attempt:', payload.email);
+  const response = await fetch(`${API_URL}/auth/register`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json',
+    },
+    body: JSON.stringify({
+      name: payload.name,
+      email: payload.email,
+      password: payload.password,
+      workspace_name: payload.workspace_name || `${payload.name}'s Workspace`,
+    }),
+  });
+
+  const data = await response.json();
+
+  if (!response.ok || !data.success) {
+    throw new Error(data.message || 'Registration failed. Please check your information.');
+  }
+
+  const token = data.data?.token || '';
+  const workspaceId = data.data?.current_workspace?.id || '';
+
+  const redirectUrl = `${DASHBOARD_URL}/?token=${encodeURIComponent(token)}${workspaceId ? `&workspace_id=${workspaceId}` : ''}`;
 
   return {
     success: true,
-    redirectUrl: DASHBOARD_URL,
+    redirectUrl,
   };
 }

@@ -60,9 +60,10 @@ export default function SignupPage() {
         // Redirect to configured Dashboard URL (Laravel frontend / dashboard domain)
         window.location.href = result.redirectUrl;
       }
-    } catch (err) {
+    } catch (err: unknown) {
       console.error('Signup error:', err);
-      setErrors({ general: 'Failed to create account. Please try again.' });
+      const msg = err instanceof Error ? err.message : 'Failed to create account. Please try again.';
+      setErrors({ general: msg });
       setLoading(false);
     }
   };
