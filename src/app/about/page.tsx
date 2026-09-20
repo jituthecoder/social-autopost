@@ -5,9 +5,9 @@ import { CTASection } from '@/components/ui/CTASection';
 import { Target, Users, Zap, ShieldCheck, HeartHandshake, Globe, Award, Sparkles, CheckCircle2 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'About Us | SocialPulse AI Social Management',
+  title: 'About Us | A4 AutoPost AI Social Management',
   description:
-    'Learn about SocialPulse mission, our team, core values, and how our AI social auto-publisher powers 250,000+ creators and agencies worldwide.',
+    'Learn about A4 AutoPost mission, our team, core values, and how our AI social auto-publisher powers 250,000+ creators and agencies worldwide.',
   alternates: {
     canonical: '/about',
   },
@@ -181,7 +181,7 @@ export default function AboutPage() {
                   marginBottom: '1.75rem',
                 }}
               >
-                We built SocialPulse to be the publishing engine we always wished we had: powered by intelligent AI hook writers, visual drag-and-drop calendar queues, and enterprise-grade queue reliability.
+                We built A4 AutoPost to be the publishing engine we always wished we had: powered by intelligent AI hook writers, visual drag-and-drop calendar queues, and enterprise-grade queue reliability.
               </p>
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
@@ -247,7 +247,7 @@ export default function AboutPage() {
                 letterSpacing: '-0.02em',
               }}
             >
-              The Values Behind SocialPulse
+              The Values Behind A4 AutoPost
             </h2>
           </div>
 
@@ -324,7 +324,7 @@ export default function AboutPage() {
                 letterSpacing: '-0.02em',
               }}
             >
-              Meet the Minds Behind SocialPulse
+              Meet the Minds Behind A4 AutoPost
             </h2>
             <p style={{ fontSize: '1.05rem', color: 'var(--color-text-muted)', marginTop: '0.5rem' }}>
               A team of product designers, AI researchers, and full-stack engineers passionate about modern publishing.

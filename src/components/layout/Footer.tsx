@@ -55,30 +55,21 @@ export function Footer() {
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
-                gap: '0.6rem',
-                fontSize: '1.25rem',
-                fontWeight: '800',
-                color: 'var(--color-text-main)',
                 marginBottom: '1rem',
+                textDecoration: 'none',
               }}
             >
-              <div
+              <img
+                src="/logo.png"
+                alt="A4 AutoPost"
                 style={{
-                  width: '32px',
-                  height: '32px',
-                  borderRadius: '0.4rem',
-                  background: 'linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  color: '#ffffff',
+                  height: '56px',
+                  width: 'auto',
+                  maxHeight: '56px',
+                  objectFit: 'contain',
+                  display: 'block',
                 }}
-              >
-                <Share2 size={18} />
-              </div>
-              <span>
-                Social<span style={{ color: 'var(--color-primary)' }}>Pulse</span>
-              </span>
+              />
             </Link>
 
             <p

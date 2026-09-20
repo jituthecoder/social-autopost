@@ -83,7 +83,7 @@ function transformWPPost(raw: any): WPPost {
     raw._embedded?.['wp:featuredmedia']?.[0]?.source_url ||
     'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80';
 
-  const authorName = raw._embedded?.author?.[0]?.name || 'SocialPulse Team';
+  const authorName = raw._embedded?.author?.[0]?.name || 'A4 AutoPost Team';
   const authorAvatar = raw._embedded?.author?.[0]?.avatar_urls?.['96'];
 
   const categories = (raw._embedded?.['wp:term']?.[0] || []).map((cat: any) => ({

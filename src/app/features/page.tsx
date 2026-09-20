@@ -26,7 +26,7 @@ import {
 export const metadata: Metadata = {
   title: 'All Features | AI Social Media Management & Auto-Posting',
   description:
-    'Explore the full suite of AI content generation, multi-channel scheduling, visual calendar, client workspaces, and analytics features in SocialPulse.',
+    'Explore the full suite of AI content generation, multi-channel scheduling, visual calendar, client workspaces, and analytics features in A4 AutoPost.',
   alternates: {
     canonical: '/features',
   },
@@ -89,7 +89,7 @@ export default function FeaturesPage() {
               lineHeight: '1.65',
             }}
           >
-            From AI caption generation to automated queue scheduling, visual calendars, and client workspaces — SocialPulse replaces 5 separate social media tools.
+            From AI caption generation to automated queue scheduling, visual calendars, and client workspaces — A4 AutoPost replaces 5 separate social media tools.
           </p>
 
           <div
