@@ -2,7 +2,7 @@ import React from 'react';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import { CTASection } from '@/components/ui/CTASection';
-import { Target, Users, Zap, ShieldCheck, HeartHandshake, Globe, Award, Sparkles, CheckCircle2 } from 'lucide-react';
+import { Target, Users, Zap, ShieldCheck, HeartHandshake, Globe, Award, Sparkles, CheckCircle2, Rocket, Code2, Quote } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'About Us | A4 AutoPost AI Social Management',
@@ -20,30 +20,30 @@ const STATS = [
   { value: '18+ Hours', label: 'Saved Per Week / Team' },
 ];
 
-const TEAM_MEMBERS = [
+const FOUNDERS = [
   {
-    name: 'David Vance',
+    name: 'Jitendra Kumar',
     role: 'Co-Founder & CEO',
-    bio: 'Former Product Lead at Stripe. Passionate about building high-scale developer and marketing tools.',
-    avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80',
+    bio: 'Software developer and entrepreneur passionate about coding, building practical solutions, and turning ideas into innovative digital products that solve real-world problems and create lasting value for businesses.',
+    avatar: '/images/team/jitendra-kumar.jpg',
+    badgeType: 'vision',
+    badgeTitle: 'Vision',
+    badgeSub: '& Growth',
+    tags: ['Product', 'Strategy', 'Growth', 'Leadership'],
+    quote: 'Turning ideas into meaningful products that people love to use.',
+    objectPosition: 'top center',
   },
   {
-    name: 'Sophia Chen',
+    name: 'Reyaj Alam',
     role: 'Co-Founder & CTO',
-    bio: 'Former Senior AI Researcher. Specialized in NLP language models and enterprise background queue architectures.',
-    avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=300&q=80',
-  },
-  {
-    name: 'Alex Rivera',
-    role: 'VP of Product',
-    bio: 'Former Growth Manager. Obsessed with seamless user experience, visual scheduling calendars, and AI hooks.',
-    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80',
-  },
-  {
-    name: 'Elena Rostova',
-    role: 'Head of Customer Success',
-    bio: 'Former Digital Agency Founder. Helps creators and agency partners scale client operations frictionlessly.',
-    avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=300&q=80',
+    bio: 'Software developer focused on building innovative products that solve real-world problems. Passionate about clean code, scalable systems, and leveraging technology to make a positive impact.',
+    avatar: '/images/team/reyaj-alam.jpg',
+    badgeType: 'tech',
+    badgeTitle: 'Tech',
+    badgeSub: '& Execution',
+    tags: ['Development', 'Systems', 'Innovation', 'Problem Solving'],
+    quote: 'Building technology today for a simpler, smarter tomorrow.',
+    objectPosition: 'center',
   },
 ];
 
@@ -310,23 +310,30 @@ export default function AboutPage() {
       </section>
 
       {/* Leadership & Engineering Team */}
-      <section className="section" style={{ backgroundColor: 'var(--color-bg-alt)' }}>
+      <section className="section" style={{ backgroundColor: 'var(--color-bg-alt)', paddingTop: '5rem', paddingBottom: '6rem' }}>
         <div className="container">
-          <div style={{ textAlign: 'center', maxWidth: '700px', margin: '0 auto 4rem auto' }}>
-            <span className="badge" style={{ marginBottom: '1rem' }}>
-              Leadership Team
-            </span>
+          <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto 4rem auto' }}>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.75rem', marginBottom: '0.85rem' }}>
+              <span style={{ width: '32px', height: '1.5px', background: 'linear-gradient(90deg, transparent, #38bdf8)' }} />
+              <span style={{ fontSize: '0.78rem', fontWeight: '800', letterSpacing: '0.18em', color: '#60a5fa', textTransform: 'uppercase' }}>
+                MEET THE FOUNDERS
+              </span>
+              <span style={{ width: '32px', height: '1.5px', background: 'linear-gradient(90deg, #38bdf8, transparent)' }} />
+            </div>
+
             <h2
               style={{
-                fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)',
+                fontSize: 'clamp(1.85rem, 4vw, 2.75rem)',
                 fontWeight: '800',
-                color: 'var(--color-text-main)',
-                letterSpacing: '-0.02em',
+                color: '#ffffff',
+                letterSpacing: '-0.025em',
+                lineHeight: '1.2',
+                marginBottom: '0.75rem',
               }}
             >
-              Meet the Minds Behind A4 AutoPost
+              Built by Developers, for a <span style={{ background: 'linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #c084fc 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Better Digital World</span>
             </h2>
-            <p style={{ fontSize: '1.05rem', color: 'var(--color-text-muted)', marginTop: '0.5rem' }}>
+            <p style={{ fontSize: '1.05rem', color: '#94a3b8', lineHeight: '1.6' }}>
               A team of product designers, AI researchers, and full-stack engineers passionate about modern publishing.
             </p>
           </div>
@@ -334,34 +341,196 @@ export default function AboutPage() {
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(440px, 1fr))',
               gap: '2rem',
+              maxWidth: '1240px',
+              margin: '0 auto',
             }}
           >
-            {TEAM_MEMBERS.map((member, idx) => (
-              <div key={idx} className="glass-card" style={{ padding: '2rem', textAlign: 'center' }}>
-                <div
-                  style={{
-                    position: 'relative',
-                    width: '90px',
-                    height: '90px',
-                    borderRadius: '50%',
-                    overflow: 'hidden',
-                    margin: '0 auto 1.25rem auto',
-                    border: '3px solid var(--color-primary-light)',
-                  }}
-                >
-                  <Image src={member.avatar} alt={member.name} fill sizes="90px" style={{ objectFit: 'cover' }} />
+            {FOUNDERS.map((founder, idx) => (
+              <div
+                key={idx}
+                style={{
+                  background: 'radial-gradient(ellipse at top left, rgba(30, 41, 59, 0.75) 0%, rgba(15, 23, 42, 0.95) 100%)',
+                  border: '1px solid rgba(255, 255, 255, 0.08)',
+                  borderRadius: '1.5rem',
+                  padding: '2rem 1.75rem',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '1.75rem',
+                  boxShadow: '0 20px 40px -15px rgba(0, 0, 0, 0.6)',
+                  position: 'relative',
+                  flexWrap: 'nowrap',
+                }}
+              >
+                {/* Left: Avatar with Decorative Glow & Round Overlapping Badge */}
+                <div style={{ flexShrink: 0, position: 'relative', width: '160px', height: '160px', margin: '0 auto' }}>
+                  {/* Soft Gradient Glow Aura */}
+                  <div
+                    style={{
+                      position: 'absolute',
+                      top: '-6px',
+                      left: '-6px',
+                      width: '172px',
+                      height: '172px',
+                      borderRadius: '50%',
+                      background: 'linear-gradient(135deg, rgba(99, 102, 241, 0.35) 0%, rgba(56, 189, 248, 0.15) 100%)',
+                      filter: 'blur(8px)',
+                      zIndex: 0,
+                    }}
+                  />
+
+                  {/* Main Circular Image */}
+                  <div
+                    style={{
+                      position: 'relative',
+                      width: '150px',
+                      height: '150px',
+                      borderRadius: '50%',
+                      overflow: 'hidden',
+                      border: '3.5px solid #6366f1',
+                      boxShadow: '0 0 25px rgba(99, 102, 241, 0.45)',
+                      zIndex: 1,
+                    }}
+                  >
+                    <Image
+                      src={founder.avatar}
+                      alt={founder.name}
+                      fill
+                      sizes="150px"
+                      style={{
+                        objectFit: 'cover',
+                        objectPosition: founder.objectPosition || 'center',
+                      }}
+                    />
+                  </div>
+
+                  {/* Floating Circular Pill Badge on Bottom-Left */}
+                  <div
+                    style={{
+                      position: 'absolute',
+                      bottom: '2px',
+                      left: '-6px',
+                      width: '64px',
+                      height: '64px',
+                      borderRadius: '50%',
+                      background: '#090d16',
+                      border: '1.5px solid #6366f1',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      boxShadow: '0 6px 18px rgba(0, 0, 0, 0.8)',
+                      zIndex: 3,
+                      textAlign: 'center',
+                    }}
+                  >
+                    {founder.badgeType === 'vision' ? (
+                      <Rocket size={16} style={{ color: '#38bdf8', marginBottom: '2px' }} />
+                    ) : (
+                      <span style={{ color: '#38bdf8', fontSize: '13px', fontWeight: '800', lineHeight: '1', marginBottom: '2px' }}>
+                        {'</>'}
+                      </span>
+                    )}
+                    <span style={{ fontSize: '8px', fontWeight: '800', color: '#ffffff', lineHeight: '1.1' }}>
+                      {founder.badgeTitle}
+                    </span>
+                    <span style={{ fontSize: '7.5px', fontWeight: '700', color: '#94a3b8', lineHeight: '1.1' }}>
+                      {founder.badgeSub}
+                    </span>
+                  </div>
                 </div>
-                <h3 style={{ fontSize: '1.15rem', fontWeight: '700', color: 'var(--color-text-main)', marginBottom: '0.2rem' }}>
-                  {member.name}
-                </h3>
-                <div style={{ fontSize: '0.85rem', fontWeight: '700', color: 'var(--color-primary)', marginBottom: '0.75rem' }}>
-                  {member.role}
+
+                {/* Right: Founder Info & Details */}
+                <div style={{ flex: '1 1 0', minWidth: 0 }}>
+                  <h3
+                    style={{
+                      fontSize: '1.45rem',
+                      fontWeight: '800',
+                      color: '#ffffff',
+                      marginBottom: '0.2rem',
+                      letterSpacing: '-0.02em',
+                    }}
+                  >
+                    {founder.name}
+                  </h3>
+
+                  <div
+                    style={{
+                      fontSize: '0.92rem',
+                      fontWeight: '700',
+                      color: '#60a5fa',
+                      marginBottom: '0.85rem',
+                    }}
+                  >
+                    {founder.role}
+                  </div>
+
+                  <p
+                    style={{
+                      fontSize: '0.875rem',
+                      color: '#94a3b8',
+                      lineHeight: '1.65',
+                      marginBottom: '1.25rem',
+                    }}
+                  >
+                    {founder.bio}
+                  </p>
+
+                  {/* Skill / Focus Tags */}
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '1.25rem' }}>
+                    {founder.tags.map((tag, tIdx) => (
+                      <span
+                        key={tIdx}
+                        style={{
+                          background: 'rgba(30, 41, 59, 0.65)',
+                          border: '1px solid rgba(255, 255, 255, 0.08)',
+                          borderRadius: '9999px',
+                          padding: '0.3rem 0.85rem',
+                          fontSize: '0.78rem',
+                          color: '#cbd5e1',
+                          fontWeight: '600',
+                          letterSpacing: '0.01em',
+                        }}
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Personal Quote */}
+                  <div
+                    style={{
+                      display: 'flex',
+                      alignItems: 'flex-start',
+                      gap: '0.6rem',
+                      marginTop: '0',
+                    }}
+                  >
+                    <span
+                      style={{
+                        fontSize: '1.5rem',
+                        fontWeight: '900',
+                        color: '#6366f1',
+                        lineHeight: '1',
+                        userSelect: 'none',
+                      }}
+                    >
+                      “
+                    </span>
+                    <p
+                      style={{
+                        fontSize: '0.85rem',
+                        fontStyle: 'italic',
+                        color: '#cbd5e1',
+                        lineHeight: '1.55',
+                        margin: 0,
+                      }}
+                    >
+                      {founder.quote}
+                    </p>
+                  </div>
                 </div>
-                <p style={{ fontSize: '0.875rem', color: 'var(--color-text-muted)', lineHeight: '1.6' }}>
-                  {member.bio}
-                </p>
               </div>
             ))}
           </div>
