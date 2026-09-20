@@ -95,7 +95,7 @@ const TESTIMONIALS = [
     company: 'SaaSify Studio',
     avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80',
     content:
-      'SocialPulse transformed our entire social workflow. We manage 30+ multi-platform accounts with zero manual post delays and saved 18 hours every single week!',
+      'A4 AutoPost transformed our entire social workflow. We manage 30+ multi-platform accounts with zero manual post delays and saved 18 hours every single week!',
     metric: '+380% Impressions',
     rating: 5,
   },
@@ -105,7 +105,7 @@ const TESTIMONIALS = [
     company: 'Apex Media',
     avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80',
     content:
-      'The AI caption generator writes platform-adapted hooks that actually perform. Our client renewal rate hit 98% since we switched to SocialPulse queues.',
+      'The AI caption generator writes platform-adapted hooks that actually perform. Our client renewal rate hit 98% since we switched to A4 AutoPost queues.',
     metric: '18 hrs saved/wk',
     rating: 5,
   },
@@ -123,9 +123,9 @@ const TESTIMONIALS = [
 
 const EXTENDED_FAQS: FAQItem[] = [
   {
-    question: 'How does SocialPulse auto-posting work?',
+    question: 'How does A4 AutoPost work?',
     answer:
-      'SocialPulse connects to your social media accounts via secure official APIs. You create or generate content using AI, choose your publishing schedule or queue, and our background engine automatically formats and publishes your posts at peak engagement times.',
+      'A4 AutoPost connects to your social media accounts via secure official APIs. You create or generate content using AI, choose your publishing schedule or queue, and our background engine automatically formats and publishes your posts at peak engagement times.',
   },
   {
     question: 'Which social media platforms are supported?',
@@ -135,7 +135,7 @@ const EXTENDED_FAQS: FAQItem[] = [
   {
     question: 'Will my social accounts get restricted or banned for using auto-posting?',
     answer:
-      'Never. SocialPulse uses official developer APIs approved by Meta, LinkedIn, X, TikTok, and Pinterest. We comply 100% with platform rate limits and security guidelines.',
+      'Never. A4 AutoPost uses official developer APIs approved by Meta, LinkedIn, X, TikTok, and Pinterest. We comply 100% with platform rate limits and security guidelines.',
   },
   {
     question: 'Can I customize the AI voice to match my brand?',
@@ -470,7 +470,7 @@ export default function HomePage() {
               {
                 step: '04',
                 title: 'Auto-Publish',
-                desc: 'Sit back as SocialPulse delivers posts automatically and tracks performance.',
+                desc: 'Sit back as A4 AutoPost delivers posts automatically and tracks performance.',
                 icon: Send,
               },
             ].map((item, idx) => (
@@ -526,7 +526,7 @@ export default function HomePage() {
               Loved by <span className="gradient-text">250,000+ Marketers & Creators</span>
             </h2>
             <p style={{ fontSize: '1.05rem', color: 'var(--color-text-muted)' }}>
-              Here is what founders, creators, and agencies say about scaling with SocialPulse.
+              Here is what founders, creators, and agencies say about scaling with A4 AutoPost.
             </p>
           </div>
 
@@ -884,7 +884,7 @@ export default function HomePage() {
               Frequently Asked Questions
             </h2>
             <p style={{ fontSize: '1.05rem', color: 'var(--color-text-muted)' }}>
-              Everything you need to know about SocialPulse features, pricing, and social posting APIs.
+              Everything you need to know about A4 AutoPost features, pricing, and social posting APIs.
             </p>
           </div>
 

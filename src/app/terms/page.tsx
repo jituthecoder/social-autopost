@@ -119,9 +119,9 @@ export default function TermsOfServicePage() {
             <p style={{ color: 'var(--color-text-muted)' }}>
               For legal inquiries or notices regarding these Terms of Service, please contact:
               <br />
-              <strong>Email:</strong> legal@mydomain.com
+              <strong>Email:</strong> legal@a4autopost.com
               <br />
-              <strong>Address:</strong> SocialPulse Legal Department, San Francisco, CA.
+              <strong>Address:</strong> A4 AutoPost Legal Department.
             </p>
           </div>
         </div>

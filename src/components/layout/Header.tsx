@@ -49,30 +49,20 @@ export function Header() {
           style={{
             display: 'flex',
             alignItems: 'center',
-            gap: '0.6rem',
-            fontSize: '1.25rem',
-            fontWeight: '800',
-            color: 'var(--color-text-main)',
-            letterSpacing: '-0.02em',
+            textDecoration: 'none',
           }}
         >
-          <div
+          <img
+            src="/logo.png"
+            alt="A4 AutoPost"
             style={{
-              width: '36px',
-              height: '36px',
-              borderRadius: '0.5rem',
-              background: 'linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              color: '#ffffff',
+              height: '56px',
+              width: 'auto',
+              maxHeight: '56px',
+              objectFit: 'contain',
+              display: 'block',
             }}
-          >
-            <Share2 size={20} />
-          </div>
-          <span>
-            Social<span style={{ color: 'var(--color-primary)' }}>Pulse</span>
-          </span>
+          />
         </Link>
 
         {/* Desktop Navigation */}

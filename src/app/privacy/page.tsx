@@ -121,9 +121,9 @@ export default function PrivacyPolicyPage() {
             <p style={{ color: 'var(--color-text-muted)' }}>
               If you have any questions or concerns regarding this Privacy Policy, please contact us at:
               <br />
-              <strong>Email:</strong> privacy@mydomain.com
+              <strong>Email:</strong> privacy@a4autopost.com
               <br />
-              <strong>Address:</strong> SocialPulse Legal Team, San Francisco, CA.
+              <strong>Address:</strong> A4 AutoPost Legal Team.
             </p>
           </div>
         </div>

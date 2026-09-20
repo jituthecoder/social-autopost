@@ -30,8 +30,8 @@ export function JsonLd({ type = 'WebSite', data = {} }: JsonLdProps) {
       url: SITE_CONFIG.domain,
       logo: `${SITE_CONFIG.domain}/logo.png`,
       sameAs: [
-        'https://twitter.com/socialpulse_ai',
-        'https://linkedin.com/company/socialpulse-ai',
+        'https://twitter.com/a4autopost',
+        'https://linkedin.com/company/a4autopost',
       ],
     };
   } else if (type === 'SoftwareApplication') {

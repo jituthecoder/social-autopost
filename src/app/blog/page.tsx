@@ -8,7 +8,7 @@ import { JsonLd } from '@/components/seo/JsonLd';
 import { Calendar, Clock, ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Social Media Strategy & AI Growth Blog | SocialPulse',
+  title: 'Social Media Strategy & AI Growth Blog | A4 AutoPost',
   description:
     'Read actionable guides, AI content tips, and social media scheduling strategies to scale your social footprint.',
   alternates: {

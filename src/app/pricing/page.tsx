@@ -41,7 +41,7 @@ const EXTENDED_PRICING_FAQS: FAQItem[] = [
   {
     question: 'Do you offer refunds if I am not satisfied?',
     answer:
-      'We offer a 30-day money-back guarantee on all subscription plans if SocialPulse does not meet your team’s expectations.',
+      'We offer a 30-day money-back guarantee on all subscription plans if A4 AutoPost does not meet your team’s expectations.',
   },
   {
     question: 'What happens to my queued posts if I decide to cancel?',
