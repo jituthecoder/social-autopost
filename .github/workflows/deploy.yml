@@ -17,13 +17,18 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: 'npm'
 
       - name: Install Dependencies
         run: npm ci
 
       - name: Build Next.js Static Export
+        env:
+          NEXT_PUBLIC_SITE_URL: https://a4autopost.com
+          NEXT_PUBLIC_DASHBOARD_URL: https://dashboard.a4autopost.com
+          NEXT_PUBLIC_WORDPRESS_URL: https://wpthrust.in/
+          NEXT_PUBLIC_API_URL: https://api.a4autopost.com/api/
         run: npm run build
 
       - name: Deploy to Hostinger via SSH/rsync
