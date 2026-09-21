@@ -35,10 +35,10 @@ jobs:
         uses: easingthemes/ssh-deploy@v5.1.0
         with:
           SSH_PRIVATE_KEY: ${{ secrets.HOSTINGER_SSH_KEY }}
-          ARGS: "-avzr --delete"
+          ARGS: "-avzr"
           SOURCE: "out/"
           REMOTE_HOST: ${{ secrets.HOSTINGER_HOST }}
           REMOTE_PORT: ${{ secrets.HOSTINGER_PORT }}
           REMOTE_USER: ${{ secrets.HOSTINGER_USER }}
           TARGET: ${{ secrets.HOSTINGER_TARGET }}
-          EXCLUDE: "/.git/, /node_modules/"
+          EXCLUDE: "/.git/, /node_modules/, /laravel-api/"
