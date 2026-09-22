@@ -117,7 +117,20 @@ export default function PrivacyPolicyPage() {
           </div>
 
           <div>
-            <h2 style={{ fontSize: '1.35rem', fontWeight: '700', marginBottom: '0.75rem' }}>9. Contact Us</h2>
+            <h2 style={{ fontSize: '1.35rem', fontWeight: '700', marginBottom: '0.75rem' }}>9. Meta (Facebook & Instagram) User Data Deletion Instructions</h2>
+            <p style={{ color: 'var(--color-text-muted)', marginBottom: '0.5rem' }}>
+              In compliance with Meta Platform rules, {SITE_CONFIG.name} provides users with full control to remove and delete their data at any time:
+            </p>
+            <ol style={{ paddingLeft: '1.25rem', color: 'var(--color-text-muted)', display: 'flex', flexDirection: 'column', gap: '0.4rem', fontSize: '0.95rem' }}>
+              <li>Log in to your Facebook account and go to <strong>Settings & Privacy &gt; Settings</strong>.</li>
+              <li>Navigate to <strong>Apps and Websites</strong> on the left sidebar.</li>
+              <li>Find <strong>{SITE_CONFIG.name}</strong> in the active applications list and click <strong>Remove</strong>.</li>
+              <li>Alternatively, to delete all stored OAuth tokens and post queues immediately from our servers, send a deletion request to <a href="mailto:privacy@a4autopost.com" style={{ color: 'var(--color-primary)', fontWeight: '600' }}>privacy@a4autopost.com</a> with your registered email. Your data will be permanently wiped within 48 hours.</li>
+            </ol>
+          </div>
+
+          <div>
+            <h2 style={{ fontSize: '1.35rem', fontWeight: '700', marginBottom: '0.75rem' }}>10. Contact Us</h2>
             <p style={{ color: 'var(--color-text-muted)' }}>
               If you have any questions or concerns regarding this Privacy Policy, please contact us at:
               <br />
