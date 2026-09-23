@@ -3,7 +3,8 @@
 import React, { useState } from 'react';
 import { FormInput } from '@/components/ui/FormInput';
 import { Button } from '@/components/ui/Button';
-import { Mail, MessageSquare, MapPin, Send } from 'lucide-react';
+import { Mail, MessageSquare, MapPin, Send, Share2, ExternalLink } from 'lucide-react';
+import { SITE_CONFIG } from '@/config/seo.config';
 
 export default function ContactPage() {
   const [name, setName] = useState('');
@@ -51,7 +52,11 @@ export default function ContactPage() {
               </div>
               <div>
                 <h3 style={{ fontSize: '1.1rem', fontWeight: '700', color: 'var(--color-text-main)' }}>Email Us</h3>
-                <p style={{ fontSize: '0.9rem', color: 'var(--color-text-muted)', marginTop: '0.2rem' }}>support@mydomain.com</p>
+                <p style={{ fontSize: '0.9rem', color: 'var(--color-text-muted)', marginTop: '0.2rem' }}>
+                  <a href="mailto:support@a4autopost.com" style={{ color: 'var(--color-primary)', textDecoration: 'none' }}>
+                    support@a4autopost.com
+                  </a>
+                </p>
               </div>
             </div>
 
@@ -62,6 +67,49 @@ export default function ContactPage() {
               <div>
                 <h3 style={{ fontSize: '1.1rem', fontWeight: '700', color: 'var(--color-text-main)' }}>Live Support</h3>
                 <p style={{ fontSize: '0.9rem', color: 'var(--color-text-muted)', marginTop: '0.2rem' }}>Available 24/5 for Pro and Agency subscribers</p>
+              </div>
+            </div>
+
+            <div className="glass-card" style={{ padding: '1.75rem', display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+              <div style={{ width: '44px', height: '44px', borderRadius: '0.5rem', backgroundColor: 'var(--color-primary-light)', color: 'var(--color-primary)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                <Share2 size={22} />
+              </div>
+              <div style={{ width: '100%' }}>
+                <h3 style={{ fontSize: '1.1rem', fontWeight: '700', color: 'var(--color-text-main)', marginBottom: '0.5rem' }}>Official Channels</h3>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.5rem', fontSize: '0.85rem' }}>
+                  <a
+                    href={SITE_CONFIG.social.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ color: 'var(--color-primary)', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '0.25rem' }}
+                  >
+                    Instagram <ExternalLink size={12} />
+                  </a>
+                  <a
+                    href={SITE_CONFIG.social.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ color: 'var(--color-primary)', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '0.25rem' }}
+                  >
+                    LinkedIn <ExternalLink size={12} />
+                  </a>
+                  <a
+                    href={SITE_CONFIG.social.twitter}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ color: 'var(--color-primary)', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '0.25rem' }}
+                  >
+                    Twitter / X <ExternalLink size={12} />
+                  </a>
+                  <a
+                    href={SITE_CONFIG.social.facebook}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ color: 'var(--color-primary)', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '0.25rem' }}
+                  >
+                    Facebook <ExternalLink size={12} />
+                  </a>
+                </div>
               </div>
             </div>
 

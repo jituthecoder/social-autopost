@@ -30,8 +30,10 @@ export function JsonLd({ type = 'WebSite', data = {} }: JsonLdProps) {
       url: SITE_CONFIG.domain,
       logo: `${SITE_CONFIG.domain}/logo.png`,
       sameAs: [
-        'https://twitter.com/a4autopost',
-        'https://linkedin.com/company/a4autopost',
+        SITE_CONFIG.social.twitter,
+        SITE_CONFIG.social.linkedin,
+        SITE_CONFIG.social.instagram,
+        SITE_CONFIG.social.facebook,
       ],
     };
   } else if (type === 'SoftwareApplication') {

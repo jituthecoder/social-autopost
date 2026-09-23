@@ -16,4 +16,10 @@ export const SITE_CONFIG = {
     'social media analytics',
     'social queue automation',
   ],
+  social: {
+    instagram: 'https://www.instagram.com/a4autopost/',
+    linkedin: 'https://www.linkedin.com/company/145224167/',
+    twitter: 'https://x.com/a4autopost',
+    facebook: 'https://www.facebook.com/profile.php?id=61594349112657',
+  },
 };
