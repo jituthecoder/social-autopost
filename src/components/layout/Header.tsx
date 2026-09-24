@@ -55,12 +55,23 @@ export function Header() {
           <img
             src="/logo.png"
             alt="A4 AutoPost"
+            className="logo-dark"
             style={{
               height: '56px',
               width: 'auto',
               maxHeight: '56px',
               objectFit: 'contain',
-              display: 'block',
+            }}
+          />
+          <img
+            src="/logo-light.png"
+            alt="A4 AutoPost"
+            className="logo-light"
+            style={{
+              height: '56px',
+              width: 'auto',
+              maxHeight: '56px',
+              objectFit: 'contain',
             }}
           />
         </Link>
