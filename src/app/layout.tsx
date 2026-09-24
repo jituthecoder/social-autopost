@@ -4,6 +4,7 @@ import { ThemeProvider } from '@/components/theme/ThemeProvider';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { JsonLd } from '@/components/seo/JsonLd';
+import { GoogleAnalytics } from '@/components/analytics/GoogleAnalytics';
 import { SITE_CONFIG } from '@/config/seo.config';
 
 export const metadata: Metadata = {
@@ -96,6 +97,7 @@ export default function RootLayout({
       </head>
       <body>
         <ThemeProvider>
+          <GoogleAnalytics />
           <JsonLd type="WebSite" />
           <JsonLd type="Organization" />
           <Header />
