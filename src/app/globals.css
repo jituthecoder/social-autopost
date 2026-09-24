@@ -284,3 +284,25 @@ img, video {
   color: var(--color-primary);
   border: 1px solid rgba(79, 70, 229, 0.2);
 }
+
+/* Theme-Adaptive Brand Logos */
+.logo-dark {
+  display: block;
+}
+.logo-light {
+  display: none;
+}
+
+[data-theme="light"] .logo-dark {
+  display: none !important;
+}
+[data-theme="light"] .logo-light {
+  display: block !important;
+}
+
+[data-theme="dark"] .logo-dark {
+  display: block !important;
+}
+[data-theme="dark"] .logo-light {
+  display: none !important;
+}
