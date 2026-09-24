@@ -4,7 +4,6 @@ import { ThemeProvider } from '@/components/theme/ThemeProvider';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { JsonLd } from '@/components/seo/JsonLd';
-import { GoogleAnalytics } from '@/components/analytics/GoogleAnalytics';
 import { SITE_CONFIG } from '@/config/seo.config';
 
 export const metadata: Metadata = {
@@ -80,6 +79,21 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* Google tag (gtag.js) */}
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${SITE_CONFIG.googleAnalyticsId}`}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${SITE_CONFIG.googleAnalyticsId}');
+            `,
+          }}
+        />
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -97,7 +111,6 @@ export default function RootLayout({
       </head>
       <body>
         <ThemeProvider>
-          <GoogleAnalytics />
           <JsonLd type="WebSite" />
           <JsonLd type="Organization" />
           <Header />
