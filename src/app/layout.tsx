@@ -8,6 +8,9 @@ import { SITE_CONFIG } from '@/config/seo.config';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_CONFIG.domain),
+  alternates: {
+    canonical: './',
+  },
   title: {
     default: `${SITE_CONFIG.name} | AI-Powered Social Media Management & Auto-Posting`,
     template: `%s | ${SITE_CONFIG.name}`,
