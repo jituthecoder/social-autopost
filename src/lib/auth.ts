@@ -3,8 +3,8 @@
  * Connects directly to the Laravel 11 API Backend (https://social-api.w3lead.in/api/v1)
  */
 
-export const DASHBOARD_URL = process.env.NEXT_PUBLIC_DASHBOARD_URL || 'https://social-dashboard.w3lead.in';
-export const API_URL = (process.env.NEXT_PUBLIC_API_URL || 'https://social-api.w3lead.in/api/v1').replace(/\/+$/, '');
+export const DASHBOARD_URL = process.env.NEXT_PUBLIC_DASHBOARD_URL || 'https://dashboard.a4autopost.com';
+export const API_URL = (process.env.NEXT_PUBLIC_API_URL || 'https://api.a4autopost.com/api/v1').replace(/\/+$/, '');
 
 export interface LoginPayload {
   email: string;
@@ -42,7 +42,7 @@ export async function loginUser(payload: LoginPayload): Promise<{ success: boole
   const token = data.data?.token || '';
   const workspaceId = data.data?.current_workspace?.id || '';
 
-  const redirectUrl = `${DASHBOARD_URL}/?token=${encodeURIComponent(token)}${workspaceId ? `&workspace_id=${workspaceId}` : ''}`;
+  const redirectUrl = `${DASHBOARD_URL}/dashboard?token=${encodeURIComponent(token)}${workspaceId ? `&workspace_id=${workspaceId}` : ''}`;
 
   return {
     success: true,
@@ -74,7 +74,7 @@ export async function signupUser(payload: SignupPayload): Promise<{ success: boo
   const token = data.data?.token || '';
   const workspaceId = data.data?.current_workspace?.id || '';
 
-  const redirectUrl = `${DASHBOARD_URL}/?token=${encodeURIComponent(token)}${workspaceId ? `&workspace_id=${workspaceId}` : ''}`;
+  const redirectUrl = `${DASHBOARD_URL}/dashboard?token=${encodeURIComponent(token)}${workspaceId ? `&workspace_id=${workspaceId}` : ''}`;
 
   return {
     success: true,

@@ -79,30 +79,31 @@ export default function LoginPage() {
             style={{
               display: 'inline-flex',
               alignItems: 'center',
-              gap: '0.5rem',
-              fontSize: '1.25rem',
-              fontWeight: '800',
-              color: 'var(--color-text-main)',
+              justifyContent: 'center',
               marginBottom: '1rem',
+              textDecoration: 'none',
             }}
           >
-            <div
+            <img
+              src="/logo.png"
+              alt="A4 AutoPost"
+              className="logo-dark"
               style={{
-                width: '32px',
-                height: '32px',
-                borderRadius: '0.4rem',
-                background: 'linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: '#ffffff',
+                height: '46px',
+                width: 'auto',
+                objectFit: 'contain',
               }}
-            >
-              <Share2 size={18} />
-            </div>
-            <span>
-              Social<span style={{ color: 'var(--color-primary)' }}>Pulse</span>
-            </span>
+            />
+            <img
+              src="/logo-light.png"
+              alt="A4 AutoPost"
+              className="logo-light"
+              style={{
+                height: '46px',
+                width: 'auto',
+                objectFit: 'contain',
+              }}
+            />
           </Link>
 
           <h1 style={{ fontSize: '1.5rem', fontWeight: '800', color: 'var(--color-text-main)' }}>
