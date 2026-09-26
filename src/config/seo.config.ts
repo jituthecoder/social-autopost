@@ -6,7 +6,7 @@ export const SITE_CONFIG = {
   apiUrl: process.env.NEXT_PUBLIC_API_URL || 'https://api.a4autopost.com/api/v1',
   googleAnalyticsId: process.env.NEXT_PUBLIC_GA_ID || 'G-FJYLP8X6RX',
   twitterHandle: '@a4autopost',
-  ogImage: '/logo.png',
+  ogImage: '/og-image.png',
   author: 'A4 AutoPost Team',
   keywords: [
     'AI social media manager',

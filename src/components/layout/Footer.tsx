@@ -212,14 +212,14 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <a href={`${SITE_CONFIG.dashboardUrl}/register`} style={{ fontSize: '0.9rem', color: 'var(--color-text-muted)', textDecoration: 'none' }}>
+                <Link href="/signup" style={{ fontSize: '0.9rem', color: 'var(--color-text-muted)' }}>
                   Start Free Trial
-                </a>
+                </Link>
               </li>
               <li>
-                <a href={`${SITE_CONFIG.dashboardUrl}/login`} style={{ fontSize: '0.9rem', color: 'var(--color-text-muted)', textDecoration: 'none' }}>
+                <Link href="/login" style={{ fontSize: '0.9rem', color: 'var(--color-text-muted)' }}>
                   Client Portal
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

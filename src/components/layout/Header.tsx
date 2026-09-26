@@ -116,10 +116,10 @@ export function Header() {
           <ThemeToggle />
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }} className="desktop-nav">
-            <Button href={`${SITE_CONFIG.dashboardUrl}/login`} variant="ghost" size="sm">
+            <Button href="/login" variant="ghost" size="sm">
               Log In
             </Button>
-            <Button href={`${SITE_CONFIG.dashboardUrl}/register`} variant="primary" size="sm">
+            <Button href="/signup" variant="primary" size="sm">
               Start Your Free Trial
             </Button>
           </div>
@@ -185,10 +185,10 @@ export function Header() {
               borderTop: '1px solid var(--color-border)',
             }}
           >
-            <Button href={`${SITE_CONFIG.dashboardUrl}/login`} variant="outline" fullWidth onClick={() => setMobileMenuOpen(false)}>
+            <Button href="/login" variant="outline" fullWidth onClick={() => setMobileMenuOpen(false)}>
               Log In
             </Button>
-            <Button href={`${SITE_CONFIG.dashboardUrl}/register`} variant="primary" fullWidth onClick={() => setMobileMenuOpen(false)}>
+            <Button href="/signup" variant="primary" fullWidth onClick={() => setMobileMenuOpen(false)}>
               Start Your Free Trial
             </Button>
           </div>
